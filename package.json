@@ -1,0 +1,19 @@
+{
+  "name": "talk-to-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "generate": "npx @gqlpt/cli generate ./src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@gqlpt/cli": "^0.0.0-alpha.22",
+    "dotenv": "^16.4.5",
+    "gqlpt": "^0.0.0-alpha.22",
+    "ts-node": "^10.9.2"
+  }
+}
