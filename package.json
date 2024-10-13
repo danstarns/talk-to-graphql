@@ -6,7 +6,9 @@
     "start:local": "ts-node ./src/local/local.ts",
     "generate:local": "npx @gqlpt/cli generate ./src/local -t ./src/local/schema.graphql",
     "start:remote": "ts-node ./src/remote/remote.ts",
-    "generate:remote": "npx @gqlpt/cli generate ./src/remote"
+    "generate:remote": "npx @gqlpt/cli generate ./src/remote",
+    "upload:vector": "ts-node ./src/rag-vector/upload.ts",
+    "query:rag": "ts-node ./src/rag-vector/query.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +16,10 @@
   "description": "",
   "dependencies": {
     "@gqlpt/cli": "^0.0.0-alpha.26",
+    "@langchain/openai": "^0.3.7",
     "dotenv": "^16.4.5",
     "gqlpt": "^0.0.0-alpha.26",
+    "neo4j-driver": "^5.25.0",
     "ts-node": "^10.9.2"
   }
 }

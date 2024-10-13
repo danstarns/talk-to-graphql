@@ -31,6 +31,11 @@ This repository demonstrates the usage of GQLPT (GraphQL Plain Text) to query a 
    GQLPT_ADAPTER="openai"
    ```
 
+   // Required for using RAG Vector example
+   NEO4J_URI="bolt://localhost:7687"
+   NEO4J_USER="neo4j"
+   NEO4J_PASSWORD="password"
+
    Replace `YOUR_GITHUB_PERSONAL_ACCESS_TOKEN` with your actual GitHub Personal Access Token and `YOUR_OPENAI_API_KEY` with your OpenAI API key.
 
 ## Usage
