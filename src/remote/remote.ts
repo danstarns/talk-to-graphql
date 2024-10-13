@@ -36,9 +36,9 @@ async function main() {
 
   const starCount = await getGraphQLStarCount();
 
-  console.log("Latest Issue", latestIssue);
+  console.log("Latest Issue", JSON.stringify(latestIssue, null, 2));
 
-  console.log("Star Count", starCount);
+  console.log("Star Count", JSON.stringify(starCount, null, 2));
 }
 
 main();

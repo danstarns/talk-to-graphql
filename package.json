@@ -3,17 +3,19 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "ts-node ./src/index.ts",
-    "generate": "npx @gqlpt/cli generate ./src"
+    "start:local": "ts-node ./src/local/local.ts",
+    "generate:local": "npx @gqlpt/cli generate ./src/local -t ./src/local/schema.graphql",
+    "start:remote": "ts-node ./src/remote/remote.ts",
+    "generate:remote": "npx @gqlpt/cli generate ./src/remote"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@gqlpt/cli": "^0.0.0-alpha.24",
+    "@gqlpt/cli": "^0.0.0-alpha.26",
     "dotenv": "^16.4.5",
-    "gqlpt": "^0.0.0-alpha.24",
+    "gqlpt": "^0.0.0-alpha.26",
     "ts-node": "^10.9.2"
   }
 }

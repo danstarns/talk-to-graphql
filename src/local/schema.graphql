@@ -1,0 +1,29 @@
+type Login {
+  id: ID!
+  createdAt: String!
+  user: User!
+}
+
+type User {
+  name: String!
+  logins: [Login!]!
+}
+
+input UserWhere {
+  name: String!
+}
+
+input DateWhere {
+  gt: String
+  lt: String
+}
+
+input LoginWhere {
+  date: DateWhere
+  user: UserWhere
+}
+
+type Query {
+  logins(where: LoginWhere): [Login!]!
+  users(where: UserWhere): [User!]!
+}

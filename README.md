@@ -2,6 +2,8 @@
 
 This repository demonstrates the usage of GQLPT (GraphQL Plain Text) to query a GraphQL API using natural language. It uses the GitHub GraphQL API as an example.
 
+> You can swap between local and remote examples in the retrospective dir in src.
+
 ## Setup
 
 1. Clone this repository:
@@ -18,12 +20,17 @@ This repository demonstrates the usage of GQLPT (GraphQL Plain Text) to query a 
    ```
 
 3. Create a `.env` file in the root directory with the following content:
+
    ```
+   // For using the remote example
    GQLPT_URL="https://api.github.com/graphql"
    GQLPT_HEADERS='{"Authorization": "Bearer YOUR_GITHUB_PERSONAL_ACCESS_TOKEN"}'
+
+   // Required for both local and remote examples
    OPENAI_API_KEY="YOUR_OPENAI_API_KEY"
    GQLPT_ADAPTER="openai"
    ```
+
    Replace `YOUR_GITHUB_PERSONAL_ACCESS_TOKEN` with your actual GitHub Personal Access Token and `YOUR_OPENAI_API_KEY` with your OpenAI API key.
 
 ## Usage
@@ -31,20 +38,20 @@ This repository demonstrates the usage of GQLPT (GraphQL Plain Text) to query a 
 1. Generate types:
 
    ```
-   npm run generate
+   npm run generate:remote // or :local
    ```
 
    This command will generate TypeScript types based on the GraphQL schema.
 
 2. Run the application:
    ```
-   npm run start
+   npm run start:remote // or :local
    ```
-   This will execute the main script, which demonstrates querying the GitHub GraphQL API using plain text.
+   This will execute the remote script, which demonstrates querying the GitHub GraphQL API using plain text.
 
 ## What the Code Does
 
-The main script (`index.ts`) does the following:
+The main script (`remote.ts`) does the following:
 
 1. Sets up a GQLPT client using the GitHub GraphQL API URL and your OpenAI API key.
 2. Defines two functions:
