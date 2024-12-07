@@ -15,10 +15,10 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@gqlpt/cli": "^0.0.0-alpha.28",
+    "@gqlpt/cli": "^0.0.0-alpha.31",
     "@langchain/openai": "^0.3.7",
     "dotenv": "^16.4.5",
-    "gqlpt": "^0.0.0-alpha.28",
+    "gqlpt": "^0.0.0-alpha.31",
     "neo4j-driver": "^5.25.0",
     "ts-node": "^10.9.2"
   }
